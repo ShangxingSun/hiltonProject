@@ -1,0 +1,14 @@
+<h2>Reservation Details</h2>
+
+<div *ngIf="reservation">
+
+  <h3>{{reservation.guest_name}}</h3>
+  <h4>{{ reservation.arrival_time }}</h4>
+  <h4>{{ reservation.table_size }}</h4>
+  <h4>{{ reservation.status}}</h4>
+  <p>{{reservation.guest_contact}}</p>
+</div>
+<button *ngIf="reservation" type="button"> <a [title]="'edit_reservation'" [routerLink]="['/edit-reservation',reservation.id]" > 
+  Edit
+</a>
+</button>

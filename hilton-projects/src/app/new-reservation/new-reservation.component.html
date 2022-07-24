@@ -1,0 +1,50 @@
+<h1>New Reservation</h1>
+
+<form [formGroup]="newReservationForm" (ngSubmit)="onSubmit()">
+
+    <div>
+        <label for="guest_name">
+        Guest Name
+        </label>
+        <input id="guest_name" type="text" formControlName="guest_name">
+    </div>
+
+    <div>
+        <label for="arrival_time">
+        Expected Arrival Time
+        </label>
+        <input id="arrival_time" type="text" formControlName="arrival_time">
+    </div>
+  
+    <div>
+        <label for="table_size">
+        Table Size
+        </label>
+        <input id="table_size" type="number" formControlName="table_size">
+    </div>
+
+    <div>
+        <label for="guest_contact">
+        Contact Info
+        </label>
+        <input id="guest_contact" type="text" formControlName="guest_contact">
+    </div>
+
+    <mat-form-field  appearance="fill" color="accent">
+      <mat-label>Status</mat-label>
+      <mat-select formControlName="status">
+        <mat-option [value]="'open'">
+          Open
+        </mat-option>
+        <mat-option  [value]="'cancel'">
+          Cancel
+        </mat-option>
+        <mat-option  [value]="'completed'">
+          Completed
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <button class="button" type="submit">Reserve</button>
+  
+  </form>

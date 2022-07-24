@@ -1,0 +1,12 @@
+<h2>reservation list</h2> 
+<div *ngFor = "let reservation of reservations">
+    <h3>
+        <a [title]=" reservation.id + ' details'"
+            [routerLink]="['/reservations',reservation.id]">
+        {{ reservation.guest_name }}
+        </a>
+    </h3>
+    <p>{{reservation.arrival_time}}</p>
+    <p>{{reservation.table_size}}</p>
+    <h4>{{reservation.status}}</h4>
+</div>

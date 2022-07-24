@@ -1,6 +1,4 @@
 const axios = require('axios').default;
-// const dbService = require("./dbservice");
-// const db = dbService.db;
 
 const express = require('express');
 const app = express();

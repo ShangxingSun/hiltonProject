@@ -3,11 +3,6 @@ const axios = require('axios').default;
 var expect = require('chai').expect;
 
 describe('Our application', async function() {
-  var app,
-      date;
-
-  // Timeout for tests that take time
-  this.timeout(5000);
 
 it('when visiting none-valid url, it shoudl return 404 ', async function() {
     try{
